@@ -1,0 +1,27 @@
+import pgzrun
+import random
+
+WIDTH=300
+HEIGHT=300
+
+def draw():
+    screen.fill("black")
+    w=WIDTH-200
+    h=HEIGHT-200
+    r=0
+    g=random.randint(120,255)
+    b=255
+    x1=0
+    y1=0
+    for x in range(55):
+        #creating a rectangle requires 2 steps
+        #step1- setting the properties of the rectangle
+        rectangle=Rect((50,50),(50,50))
+        rectangle.center=(x1,y1)
+        #step2- drawing on the screen
+        screen.draw.filled_rect(rectangle,(r,g,b))
+        r=r+4
+        b=b-4
+        x1=x1+5
+        y1=y1+5
+pgzrun.go()
